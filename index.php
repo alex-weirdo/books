@@ -34,10 +34,6 @@ function get_authors ($ids) {
     return $authors;
 }
 
-function get_all_authors () {
-    return json_decode(file_get_contents('https://api.book24.ru/api/v1/catalog/lists/authors/'));
-}
-
 $books = [];
 
 while (count($books_by_api = get_books($section_id, $page++)) > 0) {
